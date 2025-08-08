@@ -15,6 +15,7 @@ dependencies = [
   "matplotlib",
   "seaborn",
   "tqdm",
+  "scikit-learn",
 ]
 
 [tool.setuptools.packages.find]
