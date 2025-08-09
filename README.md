@@ -19,6 +19,8 @@ src/malliavin_regression/   # library code (no top-level execution)
 
 examples/                   # runnable demos
 
+Learning in Hilber spaces.pdf  #theory
+
 tests/                      # minimal pytest
 
 ## License
