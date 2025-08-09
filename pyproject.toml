@@ -18,5 +18,11 @@ dependencies = [
   "scikit-learn",
 ]
 
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-cov", "flake8"]
+examples = ["tqdm", "seaborn"]
+
+
 [tool.setuptools.packages.find]
 where = ["src"]
