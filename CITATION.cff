@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Malliavin Regression"
+version: "0.1.0"
+authors:
+  - family-names: Haress, Samaran
+    given-names: El Mehdi, Jules
+    # orcid: "0000-0002-XXXX-XXXX"
+date-released: 2025-08-09
+type: software
+repository-code: "https://github.com/ElMehdiHaress/MalliavinRegression"
+license: MIT
