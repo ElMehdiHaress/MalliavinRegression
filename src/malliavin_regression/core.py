@@ -315,6 +315,13 @@ def f(xs, F_train, f0, X_train, Y_train, sobolev_idx, step=0.05, scalar=False, v
         return res
 
 
+
+def _demo():
+    if __name__ == "__main__":
+        _demo()
+
+
+
 # %%
 F_train_h1 = gradient_descent(X_train, Y_train, f0, 1, n_iter, step1)
 y_pred_test_h1 = f(X_test, F_train_h1, f0, X_train, Y_train, 1, step1)
