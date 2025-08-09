@@ -89,7 +89,20 @@ from sklearn import neighbors
 import scipy
 from scipy import stats, interpolate
 from scipy.linalg import sqrtm
-from scipy.misc import derivative
+
+# Compat: scipy.misc.derivative a disparu (SciPy ≥ 2.0).
+# On essaie d'abord SciPy, sinon on utilise une dérivée numérique centrée.
+try:
+    from scipy.misc import derivative as _scipy_derivative  # type: ignore
+    def derivative(f, x, dx=1e-6):
+        return _scipy_derivative(f, x, dx=dx)
+except Exception:
+    import numpy as np
+    def derivative(f, x, dx=1e-6):
+        x = np.asarray(x)
+        return (f(x + dx) - f(x - dx)) / (2.0 * dx)
+
+
 import numpy as np
 from functools import partial
 
